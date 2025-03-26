@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- NOTA: Agregue el siguiente elemento <META> a su p?gina <HEAD>. Si es -->
+<!-- preciso, modifique el par?metro charset para especificar el conjunto -->
+<!-- de caracteres de su p?gina HTML. -->
+<!-- ---------------------------------------------------------------------- -->
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- NOTA: Agregue el siguiente elemento <FORM> a su p?gina. -->
+<!-- ---------------------------------------------------------------------- -->
+
+<style type="text/css">
+.form-style-1 {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+	width: 49%;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.form-style-1 .required{
+	color:red;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function validateForm() {
+  let x = document.forms["w2l"]["first_name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+} 
+</script>
+
+<form name="w2l" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" onsubmit="return validateForm()" method="POST">
+
+<ul class="form-style-1">
+    <input type=hidden name="oid" value="00D5e000003TQg9">
+    <input type=hidden name="retURL" value="https://impulsora.com/contactanos/">
+
+
+    <li><label>Nombre <span class="required">*</span></label>
+    <input type="text" id="first_name" name="first_name" class="field-divided" placeholder="Nombre" /> 
+    <input type="text" id="last_name" name="last_name" class="field-divided" placeholder="Apellido" /></li>
+    <li>
+        <label>Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" class="field-long" />
+    </li>
+    <li>
+        <label>Empresa <span class="required">*</span></label>
+        <input type="text" id="company" name="company" class="field-long" />
+    </li>
+    <li>
+        <label>Teléfono <span class="required">*</span></label>
+        <input type="text" id="phone" name="phone" class="field-long" />
+    </li>
+    <li>
+    <label for="street">Calle</label><textarea name="street" class="field-long"></textarea><br>
+    </li>
+    <li>
+        <label>Ciudad</label>
+        <input type="text" id="city" name="city" class="field-long" />
+    </li>
+    <label>Estado <span class="required">*</span></label>
+    <select  id="00N5e00000eSfBg" name="00N5e00000eSfBg" title="Estado" class="field-long"><option value="">--Ninguno--</option>
+	<option value="AGS   AGUASCALIENTES">AGS   AGUASCALIENTES</option>
+	<option value="BC    BAJA CALIFORNIA NORTE">BC    BAJA CALIFORNIA NORTE</option>
+	<option value="BCS   BAJA CALIFORNIA SUR">BCS   BAJA CALIFORNIA SUR</option>
+	<option value="CAMP  CAMPECHE">CAMP  CAMPECHE</option>
+	<option value="CHIH  CHIHUAHUA">CHIH  CHIHUAHUA</option>
+	<option value="CHS   CHIAPAS">CHS   CHIAPAS</option>
+	<option value="Ciudad de Mexico">Ciudad de Mexico</option>
+	<option value="COAH   COAHUILA">COAH   COAHUILA</option>
+	<option value="COL   COLIMA">COL   COLIMA</option>
+	<option value="DGO   DURANGO">DGO   DURANGO</option>
+	<option value="EDMEX    ESTADO DE MÉXICO">EDMEX    ESTADO DE MÉXICO</option>
+	<option value="GRO   GUERRERO">GRO   GUERRERO</option>
+	<option value="GTO   GUANAJUATO">GTO   GUANAJUATO</option>
+	<option value="HGO   HIDALGO">HGO   HIDALGO</option>
+	<option value="JAL   JALISCO">JAL   JALISCO</option>
+	<option value="MICH   MICHOACAN">MICH   MICHOACAN</option>
+	<option value="MOR   MORELOS">MOR   MORELOS</option>
+	<option value="NAY   NAYARIT">NAY   NAYARIT</option>
+	<option value="NL    NUEVO LEÓN">NL    NUEVO LEÓN</option>
+	<option value="OAX   OAXACA">OAX   OAXACA</option>
+	<option value="PUE  PUEBLA">PUE  PUEBLA</option>
+	<option value="QROO   QUINTANA ROO">QROO   QUINTANA ROO</option>
+	<option value="QRO   QUERETARO">QRO   QUERETARO</option>
+	<option value="SIN   SINALOA">SIN   SINALOA</option>
+	<option value="SLP   SAN LUIS POTOSI">SLP   SAN LUIS POTOSI</option>
+	<option value="SON   SONORA">SON   SONORA</option>
+	<option value="TAB   TABASCO">TAB   TABASCO</option>
+	<option value="TAMPS   TAMAULIPAS">TAMPS   TAMAULIPAS</option>
+	<option value="TLAX  TLAXCALA">TLAX  TLAXCALA</option>
+	<option value="VER   VERACRUZ">VER   VERACRUZ</option>
+	<option value="YUC  YUCATAN">YUC  YUCATAN</option>
+	<option value="ZAC   ZACATECAS">ZAC   ZACATECAS</option>
+
+    </select><br>
+
+    <li>
+        <label>CP</label>
+        <input type="text" id="zip" name="zip" class="field-long" />
+    </li>
+
+
+    <li>
+        <input type="submit" value="Submit" />
+    </li>
+</ul>
+  <input name="lead_source" value="Sitio Web" type="hidden"><br>
+
+</form>
+
+</body>
+</html>
